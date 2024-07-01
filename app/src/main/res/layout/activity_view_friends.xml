@@ -1,0 +1,24 @@
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="50px"
+
+        android:background="@color/white"
+        android:gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:textColor="@color/black"
+            android:id="@+id/tv"/>
+
+    </LinearLayout>
+
+</ScrollView>

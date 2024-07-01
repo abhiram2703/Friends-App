@@ -1,5 +1,6 @@
 package com.example.friendsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,7 +25,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     EditText et1,et2,et3,et4;
-    AppCompatButton bt1;
+    AppCompatButton bt1,bt2;
     String apiurl="https://friendsapi-re5a.onrender.com/adddata";
 
     @Override
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         et3=(EditText) findViewById(R.id.fnnameet);
         et4=(EditText) findViewById(R.id.descet);
         bt1=(AppCompatButton) findViewById(R.id.subbtn);
+        bt2=(AppCompatButton) findViewById(R.id.viewfr);
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
+                                et1.setText("");
+                                et2.setText("");
+                                et3.setText("");
+                                et4.setText("");
                                 Toast.makeText(getApplicationContext(), "SUCCESSFUL", Toast.LENGTH_LONG).show();
                             }
                         },
@@ -79,6 +85,202 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in1=new Intent(getApplicationContext(), ViewFriends.class);
+                startActivity(in1);
+            }
+        });
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
